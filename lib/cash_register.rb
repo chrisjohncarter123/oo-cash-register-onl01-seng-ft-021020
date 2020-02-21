@@ -16,7 +16,7 @@ class CashRegister
       @items = @items.push(title)
     end
     
-    last_item = price
+    @last_item = price - ( price * @discount / 100.0 )
     
   end
   
@@ -33,7 +33,11 @@ class CashRegister
   end
   
   def void_last_transaction
-  
+    @total -= @last_item
+    items.pop()
+    if(items.count == 0)
+      @total = 0
+    end
   end
 end
 
