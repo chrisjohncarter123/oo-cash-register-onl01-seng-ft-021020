@@ -1,6 +1,6 @@
 class CashRegister
   
-  attr_accessor :total, :discount, :items
+  attr_accessor :total, :discount, :items, :last_item
   def initialize( discount = 1)
     @total = 0
     @discount = discount
@@ -15,6 +15,8 @@ class CashRegister
       counter += 1
       @items = @items.push(title)
     end
+    
+    last_item = price
     
   end
   
