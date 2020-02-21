@@ -16,7 +16,7 @@ class CashRegister
       @items = @items.push(title)
     end
     
-    @last_item = price - ( price * @discount / 100.0 )
+    @last_item = price
     
   end
   
