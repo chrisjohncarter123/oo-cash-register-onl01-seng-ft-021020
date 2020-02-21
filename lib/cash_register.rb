@@ -14,7 +14,7 @@ class CashRegister
     
     @total = @total - ( @total * @discount / 100.0 )
     
-    return "After the discount, the total comes to $#{@total}."
+    return "After the discount, the total comes to $#{@total.round}."
   end
 end
 
