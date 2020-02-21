@@ -9,8 +9,13 @@ class CashRegister
   
   def add_item(title, price, quantity = 1)
     @total += (price * quantity)
+    counter = 0
     
-    @items = @items.push(title)
+    while counter < quantity do
+      counter += 1
+      @items = @items.push(title)
+    end
+    
   end
   
   def apply_discount
